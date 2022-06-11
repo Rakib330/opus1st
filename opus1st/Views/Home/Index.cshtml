@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h3>Products</h3>
+        <div class="d-flex justify-content-end mb-1">
+            <a class="btn btn-outline-primary btn-sm" asp-controller="Home" asp-action="Add">
+                Create New
+            </a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@p.ProductName</td>
+                        <td>@p.Quantity</td>
+                        <td>@p.Price</td>
+                        <td>
+                            <a class="btn btn-outline-primary btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
+                            Edit
+                            </a>
+                            <a class="btn btn-outline-warning btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
+                            Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
