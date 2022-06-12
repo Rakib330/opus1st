@@ -9,7 +9,7 @@
         <div asp-validation-summary="ModelOnly" class="text-danger">
 
         </div>
-        <form asp-action="Add" asp-controller="Home" >
+        <form asp-action="Edit" asp-controller="Home" >
             <input asp-for="Id" type="hidden" class="form-control" />
             <div class="form-group row mb-1">
                 <label asp-for="ProductName" class="col-form-label text-end col-2"></label>
@@ -35,7 +35,7 @@
             <div class="form-group row mb-1">
                 
                 <div class="col-4 offset-2">
-                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button id="Updatebtn" type="submit" class="btn btn-primary">Update</button>
                 </div>
             </div>
         </form>
@@ -45,5 +45,14 @@
     <script src="/lib/jquery/dist/jquery.js"></script>
     <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+    <script>
+        $("#Updatebtn").click(function (e) {
+            var result = window.confirm('Are you sure to change?');
+            if (result == false) {
+                e.preventDefault();
+            };
+        });
+    </script>
 }
 

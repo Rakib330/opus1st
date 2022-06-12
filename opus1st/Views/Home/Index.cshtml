@@ -11,13 +11,13 @@
                 Create New
             </a>
         </div>
-        <table class="table table-bordered">
-            <thead>
+        <table class="table table-sm">
+            <thead class="bg-info">
                 <tr>
                     <th>Name</th>
                     <th>Quantity</th>
                     <th>Price</th>
-                    <th></th>
+                    <th>Action</th>
 
                 </tr>
             </thead>
@@ -32,7 +32,7 @@
                             <a class="btn btn-outline-primary btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
                             Edit
                             </a>
-                            <a class="btn btn-outline-warning btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
+                            <a id="Deletebtn" class="btn btn-outline-warning btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
                             Delete
                             </a>
                         </td>
@@ -42,4 +42,14 @@
         </table>
     </div>
 </div>
+@section scripts{
+    <script>
+        $("#Deletebtn").click(function (e) {
+            var result = window.confirm('Are you sure to Delete?');
+            if (result == false) {
+                e.preventDefault();
+            };
+        });
+    </script>
+}
 

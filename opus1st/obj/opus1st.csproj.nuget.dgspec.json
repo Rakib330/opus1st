@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Md Rakibul Hasan\\Desktop\\opus1st\\opus1st\\opus1st.csproj": {}
+    "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Md Rakibul Hasan\\Desktop\\opus1st\\opus1st\\opus1st.csproj": {
+    "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Md Rakibul Hasan\\Desktop\\opus1st\\opus1st\\opus1st.csproj",
+        "projectUniqueName": "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj",
         "projectName": "opus1st",
-        "projectPath": "C:\\Users\\Md Rakibul Hasan\\Desktop\\opus1st\\opus1st\\opus1st.csproj",
+        "projectPath": "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj",
         "packagesPath": "C:\\Users\\Md Rakibul Hasan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Md Rakibul Hasan\\Desktop\\opus1st\\opus1st\\obj\\",
+        "outputPath": "R:\\Opus\\opus1st\\opus1st\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
