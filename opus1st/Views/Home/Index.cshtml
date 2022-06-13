@@ -5,14 +5,19 @@
 
 <div class="row">
     <div class="col-12">
-        <h3>Products</h3>
-        <div class="d-flex justify-content-end mb-1">
-            <a class="btn btn-outline-primary btn-sm" asp-controller="Home" asp-action="Add">
-                Create New
-            </a>
-        </div>
-        <table class="table table-sm">
-            <thead class="bg-info">
+
+        <div class="card text-dark bg-light mb-3" style="box-shadow:0px 0px 5px #999;" >
+          <div class="card-header">
+              <h1>Products</h1>
+              <div class="d-flex justify-content-end mb-1">
+                <a class="btn btn-success btn-sm" asp-controller="Home" asp-action="Add">
+                    Create New
+                </a>
+              </div>
+          </div>
+          <div class="card-body">
+            <table class="table table-sm table-striped table-hover text-center">
+            <thead class="h5">
                 <tr>
                     <th>Name</th>
                     <th>Quantity</th>
@@ -29,10 +34,10 @@
                         <td>@p.Quantity</td>
                         <td>@p.Price</td>
                         <td>
-                            <a class="btn btn-outline-primary btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
+                            <a class="btn btn-info btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
                             Edit
                             </a>
-                            <a id="Deletebtn" class="btn btn-outline-warning btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
+                            <a id="Deletebtn" class="btn btn-danger btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
                             Delete
                             </a>
                         </td>
@@ -40,6 +45,12 @@
                 }
             </tbody>
         </table>
+          </div>
+        </div>
+
+     
+        
+        
     </div>
 </div>
 @section scripts{
