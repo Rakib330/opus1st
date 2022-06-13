@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj": {}
+    "E:\\Rakib\\Development\\opus1st\\opus1st\\opus1st.csproj": {}
   },
   "projects": {
-    "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj": {
+    "E:\\Rakib\\Development\\opus1st\\opus1st\\opus1st.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj",
+        "projectUniqueName": "E:\\Rakib\\Development\\opus1st\\opus1st\\opus1st.csproj",
         "projectName": "opus1st",
-        "projectPath": "R:\\Opus\\opus1st\\opus1st\\opus1st.csproj",
-        "packagesPath": "C:\\Users\\Md Rakibul Hasan\\.nuget\\packages\\",
-        "outputPath": "R:\\Opus\\opus1st\\opus1st\\obj\\",
+        "projectPath": "E:\\Rakib\\Development\\opus1st\\opus1st\\opus1st.csproj",
+        "packagesPath": "C:\\Users\\Opus PC\\.nuget\\packages\\",
+        "outputPath": "E:\\Rakib\\Development\\opus1st\\opus1st\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Md Rakibul Hasan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Opus PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
