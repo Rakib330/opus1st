@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<Order>
 @{
     ViewData["Title"] = "Index";
 }
@@ -10,7 +10,7 @@
           <div class="card-header">
               <h1>Products</h1>
               <div class="d-flex justify-content-end mb-1">
-                <a class="btn btn-success btn-sm" asp-controller="Home" asp-action="Add">
+                <a class="btn btn-success btn-sm" asp-controller="Order" asp-action="Add">
                     Create New
                 </a>
               </div>
@@ -19,9 +19,12 @@
             <table class="table table-sm table-striped table-hover text-center">
             <thead class="h5">
                 <tr>
-                    <th>Name</th>
-                   
-                    <th>Price</th>
+                    <th>Id</th>
+                   <th>Product</th>
+                   <th>Price</th>
+                    <th>Quantity</th>
+                    
+                    <th>Total</th>
                     <th>Action</th>
 
                 </tr>
@@ -30,14 +33,17 @@
                 @foreach (var p in Model)
                 {
                     <tr>
-                        <td>@p.ProductName</td>
+                        <td>@p.Id</td>
+                        <td>@p.Product.ProductName</td>
+                        <td>@p.Product.Price</td>
+                        <td>@p.Quantity</td>
                         
-                        <td>@p.Price</td>
+                        <td>@(p.Product.Price * p.Quantity)</td>
                         <td>
-                            <a class="btn btn-info btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
+                            <a class="btn btn-info btn-sm" asp-controller="Order" asp-action="Edit" asp-route-id="@p.Id">
                             Edit
                             </a>
-                            <a id="Deletebtn" class="btn btn-danger btn-sm" asp-controller="Home" asp-action="Delete" asp-route-id="@p.Id">
+                            <a id="Deletebtn" class="btn btn-danger btn-sm" asp-controller="Order" asp-action="Delete" asp-route-id="@p.Id">
                             Delete
                             </a>
                         </td>
