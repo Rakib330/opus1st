@@ -20,7 +20,7 @@
             <thead class="h5">
                 <tr>
                     <th>Name</th>
-                    <th>Quantity</th>
+                    
                     <th>Price</th>
                     <th>Action</th>
 
@@ -31,7 +31,7 @@
                 {
                     <tr>
                         <td>@p.ProductName</td>
-                        <td>@p.Quantity</td>
+                        
                         <td>@p.Price</td>
                         <td>
                             <a class="btn btn-info btn-sm" asp-controller="Home" asp-action="Edit" asp-route-id="@p.Id">
@@ -55,6 +55,38 @@
 </div>
 @section scripts{
     <script>
+        Swal.fire({
+            title: 'Submit your Github username',
+            input: 'text',
+            inputAttributes: {
+                autocapitalize: 'off'
+            },
+            showCancelButton: true,
+            confirmButtonText: 'Look up',
+            showLoaderOnConfirm: true,
+            preConfirm: (login) => {
+                return fetch(`//api.github.com/users/${login}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText)
+                        }
+                        return response.json()
+                    })
+                    .catch(error => {
+                        Swal.showValidationMessage(
+                            `Request failed: ${error}`
+                        )
+                    })
+            },
+            allowOutsideClick: () => !Swal.isLoading()
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: `${result.value.login}'s avatar`,
+                    imageUrl: result.value.avatar_url
+                })
+            }
+        })
         $("#Deletebtn").click(function (e) {
             var result = window.confirm('Are you sure to Delete?');
             if (result == false) {
