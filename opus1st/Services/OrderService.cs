@@ -33,8 +33,7 @@ namespace opus1st.Services
             return db.Orders.FirstOrDefault(x => x.Id == id);
         }
 
-       
-
+        
         public bool Insert(Order Order)
         {
             db.Orders.Add(Order);
