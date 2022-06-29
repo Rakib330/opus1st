@@ -156,3 +156,6 @@ R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\opus1st.csproj.CopyComplete
 R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\opus1st.dll
 R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\opus1st.pdb
 R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\opus1st.genruntimeconfig.cache
+R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\Razor\Views\Order\Add.cshtml.g.cs
+R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\Razor\Views\Order\Edit.cshtml.g.cs
+R:\Opus\opus1st\opus1st\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs

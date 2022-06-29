@@ -28,6 +28,7 @@ namespace opus1st
             services.AddControllersWithViews();
             services.AddDbContext<ProductDbContext>(o=>o.UseSqlServer(this.Configuration.GetConnectionString("db")));
             services.AddScoped<IProduct, ProductService>();
+            services.AddScoped<IOrder, OrderService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
